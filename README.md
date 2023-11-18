@@ -6,7 +6,7 @@ In this example we use an external webcam to record the livestream of given gest
 
 The gestures are as follows: 
 
-    - FOLLOW: 👆 OR 👇
+    - FOLLOW: 👆
     - STOP: ✋
 
 Please open the code.ipynb notebook and run the code cells sequentially there.
