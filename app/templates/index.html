@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gesture Recognition</title>
+    <style>
+        #video-container {
+            position: relative;
+            width: 640px;
+            height: 480px;
+        }
+
+        #video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gesture Recognition</h1>
+    <div id="video-container">
+        <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Webcam" width="640" height="480">
+        <img id="video-overlay" src="" alt="Overlay" width="640" height="480">
+    </div>
+    
+    <script>
+        const videoOverlay = document.getElementById('video-overlay');
+
+        function showGIF(gifSrc) {
+            videoOverlay.src = gifSrc;
+            videoOverlay.style.display = 'block';
+        }
+
+        function hideGIF() {
+            videoOverlay.style.display = 'none';
+        }
+
+        // Add functionality to display GIF based on recognized gesture
+        // You can use WebSocket, AJAX, or any other method to communicate with the backend (Python/Flask)
+        // and trigger showGIF(gifSrc) function when a specific gesture is recognized.
+    </script>
+</body>
+</html>
